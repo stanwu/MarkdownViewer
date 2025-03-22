@@ -1,41 +1,41 @@
-# Markdown Viewer
+# Markdown 檢視器
 
-A simple standalone markdown viewer-only app for Windows 11.
+一個簡單獨立的、僅用於檢視 markdown 的 Windows 11 應用程式。
 
-Built with [Tauri](https://tauri.app/) — [Rust](https://www.rust-lang.org) + [SvelteKit](https://kit.svelte.dev/) + [TypeScript](https://www.typescriptlang.org/).
+使用 [Tauri](https://tauri.app/) 建構 — [Rust](https://www.rust-lang.org) + [SvelteKit](https://kit.svelte.dev/) + [TypeScript](https://www.typescriptlang.org/)。
 
-Using GitHub flavored markdown style by [sindresorhus](https://github.com/sindresorhus/generate-github-markdown-css) and rendered with [comrak](https://github.com/kivikakk/comrak). Using [window-vibrancy](https://github.com/tauri-apps/window-vibrancy) to add Mica effect to the window.
+採用由 [sindresorhus](https://github.com/sindresorhus/generate-github-markdown-css) 製作的 GitHub 風格 markdown 樣式，並使用 [comrak](https://github.com/kivikakk/comrak) 進行渲染。使用 [window-vibrancy](https://github.com/tauri-apps/window-vibrancy) 為視窗添加 Mica 效果。
 
-## Usage
+## 使用方法
 
-- Download the latest `.exe` executable or `.msi` installer from the [releases page](https://github.com/alecames/MarkdownViewer/releases/latest)
-- Right click on a markdown file and select "Open with" and select the downloaded or installed executable
-- [Optional] Set the executable as the default program to open `.md` files
+- 從[發布頁面](https://github.com/alecames/MarkdownViewer/releases/latest)下載最新的 `.exe` 可執行檔或 `.msi` 安裝程式
+- 在 markdown 檔案上按右鍵，選擇「開啟方式」，然後選擇已下載或安裝的可執行檔
+- [選擇性] 將該可執行檔設為開啟 `.md` 檔案的預設程式
 
-Alternatively, you can install from source:
+或者，您也可以從原始碼安裝：
 
-- Clone the repository
-- Run `npm install` to install dependencies
-- Run `npm run tauri build` to build the `.exe` executable and `.msi` bundle
-- Repeat the steps above to set the executable as the default program to open `.md` files
+- 複製此儲存庫
+- 執行 `npm install` 安裝相依套件
+- 執行 `npm run tauri build` 以建立 `.exe` 可執行檔和 `.msi` 安裝包
+- 重複上述步驟，將可執行檔設為開啟 `.md` 檔案的預設程式
 
-## Screenshots
+## 截圖
 
-![screenshot of this readme](pics/image.png)
-![screenshot of this readme in lightmode](pics/image2.png)
+![此說明文件的截圖](pics/image.png)
+![此說明文件在淺色模式下的截圖](pics/image2.png)
 
-## Known Issues
+## 已知問題
 
-- Not tested in Windows 10 and earlier, meaning the window background may not look as intended
-- Relative image embeds don't work
-- YouTube/video embeds don't work
+- 未在 Windows 10 及更早版本測試，視窗背景可能無法如預期顯示
+- 相對路徑的圖片嵌入無法運作
+- YouTube/影片嵌入無法運作
 
-## Todo
+## 待辦事項
 
-- [ ] Fix relative image embeds
-- [ ] Add option to toggle dark/light mode in app
-- [ ] Add shortcut to edit in default text editor
-- [ ] Add option to toggle markdown rendering
-- [ ] Add syntax highlighting for code blocks
-- [ ] Add file association option for `.md` files in the Windows installer
-- [ ] Tweak Windows installer to prevent desktop shortcut by default
+- [ ] 修復相對路徑的圖片嵌入問題
+- [ ] 添加在應用程式中切換深色/淺色模式的選項
+- [ ] 添加快捷方式以在預設文字編輯器中編輯
+- [ ] 添加切換 markdown 渲染的選項
+- [ ] 為程式碼區塊添加語法高亮
+- [ ] 在 Windows 安裝程式中添加 `.md` 檔案的檔案關聯選項
+- [ ] 調整 Windows 安裝程式以預設防止桌面快捷方式
