@@ -7,7 +7,7 @@ license = ""
 repository = ""
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# 查看更多鍵值及其定義：https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [build-dependencies]
 tauri-build = { version = "1.2", features = [] }
@@ -21,6 +21,6 @@ serde_json = "1.0"
 window-vibrancy = "0.4.3"
 
 [features]
-# this feature is used for production builds or when `devPath` points to the filesystem
-# DO NOT REMOVE!!
+# 此功能用於生產構建或當 `devPath` 指向文件系統時
+# 請勿移除！！
 custom-protocol = ["tauri/custom-protocol"]
