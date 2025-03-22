@@ -1,0 +1,32 @@
+name: Build Windows App
+
+on:
+  workflow_dispatch:  # 允許手動觸發
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Build Tauri app
+        run: npm run tauri build
+        
+      - name: Upload Windows build
+        uses: actions/upload-artifact@v3
+        with:
+          name: windows-app
+          path: src-tauri/target/release/bundle/msi/*.msi
